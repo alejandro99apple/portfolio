@@ -1,0 +1,16 @@
+/* footer.component.css */
+footer {
+    padding: 20px 0;
+  }
+  
+  footer .text-uppercase {
+    font-weight: bold;
+  }
+  
+  footer .list-unstyled {
+    padding-left: 0;
+  }
+  
+  footer .list-unstyled li {
+    margin-bottom: 10px;
+  }
