@@ -1,10 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import emailjs from 'emailjs-com';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-me',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.css']
 })
@@ -38,7 +41,7 @@ export class ContactMeComponent implements OnInit {
     });
   }
 
-  public sendEmail(e: Event): void {
+  public sendEmail(e: Event) {
     e.preventDefault();
 
     if (this.contactForm.valid) {
@@ -60,7 +63,7 @@ export class ContactMeComponent implements OnInit {
               text: 'There was an error sending your message. Please try again later.',
               confirmButtonText: 'OK'
             });
-          }
+          },
         );
     } else {
       this.contactForm.markAllAsTouched();
