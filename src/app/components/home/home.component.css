@@ -1,12 +1,19 @@
 /* home.component.css */
 .home{
-    height: 100vh;
+  height: 100vh;
 }
+
+.background{
+  margin-top: 58px;
+}
+
 .jumbotron {
-    background-color: #f8f9fa;
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
     padding: 2rem 1rem;
-    margin-bottom: 2rem;
-    border-radius: 0.3rem;
+
   }
   
   .jumbotron .display-4 {
@@ -22,3 +29,8 @@
     font-size: 1.25rem;
     border-radius: 0.3rem;
   }
+
+
+  
+
+  

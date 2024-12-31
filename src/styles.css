@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: rgb(59, 58, 58) rgb(165, 163, 163); /* Firefox */
+    scrollbar-width: thin; /* Firefox */
+
+  }
+
+  @font-face {
+    font-family: 'Nasalization';
+    src: url('/fonts/Nasalization Rg.otf') format('truetype');
+  }
+
+  body {
+    font-family: 'Nasalization', sans-serif;
+  }
