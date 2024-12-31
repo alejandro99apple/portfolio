@@ -8,7 +8,6 @@ import { Component, HostListener } from '@angular/core';
 })
 export class HeaderComponent {
 
-  constructor() { }
 
   ngOnInit(): void {
     this.addClickEventToLinks();
