@@ -1,20 +1,19 @@
-/* home.component.css */
-.home{
-  height: 100vh;
-}
-
-.background{
-  margin-top: 58px;
-}
-
-.jumbotron {
+  /* home.component.css */
+  .home{
+    height: 100vh;
     background-image: url('/images/background.jpg');
     background-size: cover;
     background-position: center;
     color: white;
     padding: 2rem 1rem;
-
+    clip-path: ellipse(99% 55% at 51% 45%);
   }
+
+  .background{
+    margin-top: 58px;
+  }
+
+
   
   .jumbotron .display-4 {
     font-weight: 300;
@@ -30,7 +29,6 @@
     border-radius: 0.3rem;
   }
 
-
-  
-
-  
+  #projects{
+    margin-bottom: 2rem;
+  }

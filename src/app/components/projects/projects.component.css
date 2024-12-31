@@ -1,7 +1,7 @@
 /* projects.component.css */
 #projects {
     padding: 60px 0;
-    background-color: #f8f9fa;
+    background-color: white;
 }
 
 #projects h2 {
@@ -9,5 +9,4 @@
     margin-bottom: 40px;
     font-size: 2.5rem;
     font-weight: bold;
-    font-family: 'Minecraftia', monospace; /* Añadido estilo de fuente Minecraftia */
 }
