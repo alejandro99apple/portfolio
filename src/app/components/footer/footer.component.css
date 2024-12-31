@@ -1,16 +1,20 @@
-/* footer.component.css */
+
 footer {
-    padding: 20px 0;
-  }
-  
-  footer .text-uppercase {
-    font-weight: bold;
-  }
-  
-  footer .list-unstyled {
-    padding-left: 0;
-  }
-  
-  footer .list-unstyled li {
-    margin-bottom: 10px;
-  }
+  padding: 20px 0;
+}
+
+footer .text-uppercase {
+  font-weight: bold;
+  text-align: center; /* Centrar el h5 */
+}
+
+footer .list-unstyled {
+  padding-left: 0;
+  display: flex;
+  justify-content: space-between; /* Justificar los li con space-between */
+}
+
+footer .list-unstyled li {
+  margin-bottom: 10px;
+}
+ 
