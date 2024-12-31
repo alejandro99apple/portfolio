@@ -30,8 +30,6 @@ jobs:
       - name: Run lint
         run: npm run lint
 
-      - name: Build project
-        run: npm run build -- --configuration production
 
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
