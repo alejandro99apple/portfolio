@@ -1,18 +1,16 @@
-import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import emailjs from 'emailjs-com';
-import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-contact-me',
-  standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.css']
 })
-export class ContactMeComponent {
+export class ContactMeComponent implements OnInit {
   contactForm: FormGroup;
+  isBrowser: boolean;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -20,9 +18,27 @@ export class ContactMeComponent {
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required]
     });
+    this.isBrowser = typeof window !== 'undefined' && typeof document !== 'undefined';
   }
 
-  public sendEmail(e: Event) {
+  ngOnInit(): void {
+    if (this.isBrowser) {
+      // Código que accede a document solo se ejecuta en el navegador
+      this.addClickEventToLinks();
+    }
+  }
+
+  addClickEventToLinks(): void {
+    // Ejemplo de código que accede a document
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        console.log('Link clicked');
+      });
+    });
+  }
+
+  public sendEmail(e: Event): void {
     e.preventDefault();
 
     if (this.contactForm.valid) {
@@ -44,7 +60,7 @@ export class ContactMeComponent {
               text: 'There was an error sending your message. Please try again later.',
               confirmButtonText: 'OK'
             });
-          },
+          }
         );
     } else {
       this.contactForm.markAllAsTouched();
