@@ -37,7 +37,7 @@ export class ContactMeComponent {
               confirmButtonText: 'OK'
             });
           },
-          (error) => {
+          () => {
             Swal.fire({
               icon: 'error',
               title: 'Error',
