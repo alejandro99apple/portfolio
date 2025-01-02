@@ -44,7 +44,7 @@ export class ContactMeComponent implements OnInit {
   public sendEmail(e: Event) {
     e.preventDefault();
 
-    if (this.contactForm.valid) {
+   /*  if (this.contactForm.valid) {
       emailjs
         .sendForm('service_79mp9bc', 'template_lb7yb0z', e.target as HTMLFormElement, 'aLGckq1KsJFYJ6E1m')
         .then(
@@ -73,6 +73,6 @@ export class ContactMeComponent implements OnInit {
         text: 'Please fill out all fields correctly.',
         confirmButtonText: 'OK'
       });
-    }
+    } */
   }
 }
