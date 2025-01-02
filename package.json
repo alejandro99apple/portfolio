@@ -9,7 +9,7 @@
     "pretest": "node ./node_modules/puppeteer/install.js",
     "serve:ssr:portfolio-app": "node dist/portfolio-app/server/server.mjs",
     "lint": "ng lint",
-    
+    "test": "ng test",
     "e2e": "ng e2e",
     "deploy": "ng build --configuration production && npx angular-cli-ghpages --dir=dist/portfolio-app"
   },
